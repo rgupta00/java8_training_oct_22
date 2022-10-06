@@ -1,4 +1,4 @@
-package com.day1.session2.ex3;
+package com.day1.session2.ex4;
 
 public class Apple {
 	private String color;

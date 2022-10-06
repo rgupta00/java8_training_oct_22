@@ -11,6 +11,8 @@ public class DemoLambdaExpession2 {
 						new Book(11, "python", "ekta", 840),
 						new Book(621, "c programming", "gunika", 300));
 		
+		//how to use lamda with Comparator
+		//just do practice after lunch
 		
 	}
 }

@@ -4,6 +4,14 @@ public class Apple {
 	private String color;
 	private int weight;
 
+	//Apple-->T/F
+	
+	public static boolean isGreen(Apple apple) {
+		return apple.getColor().equals("green");
+	}
+	public boolean isHeavyApple() {
+		return weight>=250;
+	}
 	public String getColor() {
 		return color;
 	}
@@ -27,5 +35,12 @@ public class Apple {
 
 	public Apple() {
 	}
+
+	@Override
+	public String toString() {
+		return "Apple [color=" + color + ", weight=" + weight + "]";
+	}
+	
+	
 
 }

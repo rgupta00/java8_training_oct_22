@@ -24,45 +24,30 @@ public class AppleTester {
 				new Apple("green", 200),
 				new Apple("red", 150));
 
-		//let see some examples
+		//apples.forEach(a-> System.out.println(a));
 		
-		//want total no of apples
-		long sum= apples.stream().count();
-		System.out.println(sum);
+		List<Apple> apples2=apples.stream()
+				.filter(a-> a.getColor().equals("green"))
+				.filter(a-> a.getWeight()>=300)
+				.collect(Collectors.toList());
 		
 		
-		
-				
-		//sum of wt of all apples
-		int sumOfWtOfApples= apples.stream().filter(Apple::isHeavyApple).mapToInt(a-> a.getWeight()).sum();
-		System.out.println(sumOfWtOfApples);
-		
-		//what is method ref ::
-		
-		//i want all green apples
-		
-		List<Apple> applesGreen=apples.stream().filter(Apple::isGreen).collect(Collectors.toList());
+		apples2.forEach(a-> System.out.println(a));
 		
 		
 		
 		
-		// heavy apples >=250
-		System.out.println("---------only heavy apples-------------");
-		Predicate<Apple> heavyApplesPredicate= a-> a.getWeight()>=250;
 		
-
-		List<Apple> heavyApples = AppleApp.getAllApplesOnPredicate(apples, heavyApplesPredicate);
-		printApples(heavyApples);
 		
-		System.out.println("---------only red apples-------------");
-		Predicate<Apple> redApplesPredicate= a-> a.getColor().equals("red");
-		List<Apple> redApples = AppleApp.getAllApplesOnPredicate(apples, redApplesPredicate);
-
-		printApples(heavyApples);
-	
-		//heavy or red apples
 		
-		Predicate<Apple> redOrHeavyPredicate= heavyApplesPredicate.or(redApplesPredicate);
+		
+		
+		
+		
+		
+		
+		
+		
 		
 		
 		

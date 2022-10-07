@@ -1,6 +1,6 @@
 package com.day1.session1.ex3;
 
-public class Account {
+public class Account implements Comparable<Account>{
 	private int accId;
 	private String name;
 	private double balance;
@@ -31,6 +31,10 @@ public class Account {
 	@Override
 	public String toString() {
 		return "Account [accId=" + accId + ", name=" + name + ", balance=" + balance + "]";
+	}
+	@Override
+	public int compareTo(Account o) {
+		return Integer.compare(this.getAccId(), o.getAccId());
 	}
 	
 	
